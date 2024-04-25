@@ -4,15 +4,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color: white; -> Cor padrão pra fonte da aplicação */
+  color: white; /* -> Cor padrão pra fonte da aplicação */
 }
 
 /* Definindo variáveis */
 
 :root {
-  --tamanho-navbar: 80px;
+  --about-logo-altura: 150px;
+  --container-padding-horizontal: 150px;
+  --navbar-padding-inferior: 0px;
+  --navbar-altura: 80px;
   --curvatura-borda: 8px;
   --espessura-borda: 1px;
+}
+
+/* Uso de media query */
+
+@media (max-width: 820px) { 
+  :root {
+    --navbar-padding-inferior: 100px; /* Melhora a responsividade da navbar */
+    --container-padding-horizontal: 50px; /* Melhora a responsividade do container */
+  }
+
+  .navbar { /* Responsividade da navbar */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-content{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsividade da imagem do dev */
+
+@media (max-width: 350px) {
+  :root {
+    --about-logo-altura: 12vh;
+  }
 }
 
 /* Navbar */
@@ -24,8 +54,9 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
-  height: var(--tamanho-navbar);
+  height: var(--navbar-altura);
   width: 100vw;
+  padding-bottom: var(--navbar-padding-inferior);
 }
 
 /* Itens à direita */
@@ -74,10 +105,10 @@
 
 .container {
   padding-top: calc(
-    var(--tamanho-navbar) + 50px
+    var(--navbar-altura) + 50px
   ); /* Acrescenta o tamanho da navbar para que o conteúdo não fique cortado*/
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: var(--container-padding-horizontal);
+  padding-right: var(--container-padding-horizontal);
   background-color: #353935;
   height: 100vh;
   overflow: auto;
@@ -180,7 +211,7 @@
 
 .container .about-content img {
   width: auto;
-  height: 150px;
+  height: var(--about-logo-altura);
   border-radius: 50%;
 }
 
@@ -191,3 +222,4 @@
 
 /* Newsletters */
 
+/* Footer */
