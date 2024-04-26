@@ -11,6 +11,13 @@
     />
     <title>Document</title>
   </head>
+
+  <script>
+    const buttonAction = () => {
+      console.log("Ainda não faço nada! :)");
+    };
+  </script>
+
   <body>
     <!-- Navbar -->
     <div class="navbar">
@@ -124,7 +131,28 @@
       <h2 class="section-title">Newsletter</h2>
       <hr />
 
+      <div class="newsletter">
+        <!-- Título -->
+        <h3 class="newsletter-titulo">
+          Assine nossa newsletter e fique por dentro das novidades!
+        </h3>
 
+        <!-- Preenchimento de dados -->
+        <form class="newsletter-form">
+          <fieldset>
+            <input type="text" placeholder="Nome" />
+            <input type="email" placeholder="Seu melhor email" />
+            <div class="checkbox-group">
+              <input type="checkbox" id="checkbox-allow-notifications" />
+              <label for="checkbox-allow-notifications"
+                >Desejo receber emails diretamente</label
+              >
+            </div>
+            <button type="button" onclick="buttonAction()">Assinar!</button
+            ><!-- TODO: alterar para type="submit" futuramente-->
+          </fieldset>
+        </form>
+      </div>
     </div>
 
     <!-- Footer -->

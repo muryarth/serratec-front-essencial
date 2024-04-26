@@ -5,6 +5,8 @@
   padding: 0;
   /* box-sizing: border-box; */
   color: white; /* -> Cor padrão pra fonte da aplicação */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* Fonte padrão da aplicação */
 }
 
 /* Definindo variáveis */
@@ -43,13 +45,11 @@
     align-items: center;
   }
 
-  .footer{
+  .footer {
     flex-direction: column;
   }
 
-  .footer .footer-redes{
-    flex-direction: column;
-    align-items: center;
+  .footer .footer-redes {
     padding-top: 15px;
   }
 }
@@ -72,10 +72,8 @@
 /* Navbar */
 
 .navbar {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #7d588d;
-  position: fixed; 
+  position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -104,7 +102,8 @@
 
 /* Itens à direita */
 
-.navbar .navbar-list { /* ul */
+.navbar .navbar-list {
+  /* ul */
   width: 240px;
   display: flex;
   justify-content: space-between;
@@ -247,6 +246,24 @@
 
 /* Newsletters */
 
+.newsletter { /* div */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0px;
+}
+
+.newsletter .newsletter-form { /* form */
+  margin: 15px 0px;
+}
+
+.newsletter .newsletter-form fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 /* Footer */
 
 .footer {
@@ -258,17 +275,17 @@
   align-items: center;
 }
 
-.footer .footer-redes{
+.footer .footer-redes {
   display: flex;
   justify-content: space-between;
   gap: 15px;
   list-style-type: none;
 }
 
-.footer .footer-redes i{
+.footer .footer-redes i {
   font-size: 25px;
 }
 
-.footer .footer-detalhes p{
+.footer .footer-detalhes p {
   padding: 2px 0px;
 }
