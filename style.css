@@ -17,13 +17,16 @@
   --curvatura-borda: 8px;
   --espessura-borda: 1px;
   --sites-list-justify-content: space-between;
+  --about-content-margin-horizontal: 100px;
 }
 
 /* Uso de media query */
 
-@media (max-width: 1090px) { /* Para centralizar os cards */
+@media (max-width: 1090px) {
+  /* Para centralizar os cards */
   :root {
     --sites-list-justify-content: space-around;
+    --about-content-margin-horizontal: 50px;
   }
 }
 
@@ -31,6 +34,7 @@
   :root {
     --navbar-padding-inferior: 100px; /* Melhora a responsividade da navbar */
     --container-padding-horizontal: 50px; /* Melhora a responsividade do container */
+    --about-content-margin-horizontal: 20px;
   }
 
   .navbar {
@@ -125,6 +129,7 @@
 .container .description {
   text-align: center;
   color: white;
+  margin-bottom: 30px;
 }
 
 .container .description .primary-description {
@@ -134,13 +139,14 @@
 
 .container .description .secondary-description {
   font-size: 16px;
-  margin-bottom: 22px;
 }
 
 .container .section-title {
   color: white;
   margin-bottom: 14px;
 }
+
+/* Sites */
 
 .container .sites-content {
   width: 100%;
@@ -153,15 +159,16 @@
   justify-content: var(--sites-list-justify-content);
   list-style-type: none;
   gap: 70px;
+  margin-bottom: 30px;
 }
 
 /* Estilo do card */
 
 .card {
   max-height: auto;
-  max-width: 350px;
+  max-width: 280px;
   height: auto;
-  margin-bottom: 30px;
+  /* margin-bottom: 10px; */
 }
 
 .card .card-content:hover {
@@ -215,7 +222,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 100px;
-  margin: 68px 100px;
+  margin: 68px var(--about-content-margin-horizontal);
 }
 
 .container .about-content img {
