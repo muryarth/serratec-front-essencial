@@ -181,6 +181,10 @@
   /* margin-bottom: 10px; */
 }
 
+.card a {
+  text-decoration: none;
+}
+
 .card .card-content:hover {
   cursor: pointer;
   border-color: rgba(38, 150, 255, 0.603);
