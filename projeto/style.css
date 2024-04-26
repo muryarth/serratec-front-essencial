@@ -22,6 +22,7 @@
   --about-content-margin-horizontal: 100px;
   --footer-height: 10vh;
   --recuo-horizontal: 30px; /* Usado na navbar e no footer */
+  --newsletter-form-width: 50%
 }
 
 /* Uso de media query */
@@ -59,6 +60,7 @@
   :root {
     --sites-list-justify-content: space-around;
     --about-content-margin-horizontal: 50px;
+    --newsletter-form-width: 90%;
   }
 }
 
@@ -251,17 +253,49 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   padding: 30px 0px;
 }
 
 .newsletter .newsletter-form { /* form */
-  margin: 15px 0px;
+  margin: 30px 0px;
+  width: var(--newsletter-form-width);
 }
 
 .newsletter .newsletter-form fieldset {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  align-items: center;
+  gap: 21px;
+  padding: 35px 40px;
+  border-radius: 5px
+}
+
+.newsletter .newsletter-form fieldset .newsletter-text-input {
+  border-radius: 5px;
+  font-size: 20px;
+  width: 100%;
+  height: 37px;
+  padding: 0px 10px;
+}
+
+.newsletter .newsletter-form fieldset input {
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.newsletter .newsletter-form fieldset button {
+  background-color: #4A1564;
+  width: 65%;
+  height: 34px;
+  font-weight: bold;
+  border: var(--espessura-borda) solid white;
+  border-radius: 5px;
+}
+
+.newsletter .newsletter-form fieldset button:hover {
+  background-color: #6e3d86;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -278,14 +312,14 @@
 .footer .footer-redes {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 13px;
   list-style-type: none;
 }
 
-.footer .footer-redes i {
+.footer .footer-redes i { /* Muda somente os ícones */
   font-size: 25px;
 }
 
 .footer .footer-detalhes p {
-  padding: 2px 0px;
+  padding: 6px 0px;
 }
