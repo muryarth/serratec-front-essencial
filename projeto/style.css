@@ -5,7 +5,7 @@
   padding: 0;
   /* box-sizing: border-box; */
   color: white; /* -> Cor padrão pra fonte da aplicação */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -24,8 +24,10 @@
   --about-content-margin-horizontal: 100px;
   --footer-height: 10vh;
   --recuo-horizontal: 30px; /* Usado na navbar e no footer */
+  --recuo-horizontal-topo: var(--recuo-horizontal);
   --newsletter-form-width: 50%;
-  --box-shadow-padrao: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --box-shadow-padrao: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   --cor-barras: #1c2434;
 }
 
@@ -36,6 +38,7 @@
     --navbar-padding-inferior: 30px; /* Melhora a responsividade da navbar */
     --content-padding-horizontal: 50px; /* Melhora a responsividade do content */
     --about-content-margin-horizontal: 20px;
+    --recuo-horizontal-topo: 0px;
     --footer-height: auto;
   }
 
@@ -93,18 +96,20 @@
 .navbar .navbar-info {
   display: flex;
   align-items: center;
-  margin-left: var(--recuo-horizontal);
+  justify-content: space-around;
+  margin-left: var(--recuo-horizontal-topo);
 }
 
 .navbar .navbar-title {
   color: white;
   font-size: 26px;
-  min-width: 260px; /* Mantém o título na mesma linha */
+  min-width: 120px;
+  text-align: center;
 }
 
 .navbar .navbar-logo {
   width: auto;
-  height: 60px;
+  height: 75px;
 }
 
 /* Itens à direita */
@@ -116,7 +121,7 @@
   justify-content: space-between;
   list-style: none;
   align-items: center;
-  margin-right: var(--recuo-horizontal);
+  margin-right: var(--recuo-horizontal-topo);
 }
 
 .navbar .navbar-item {
@@ -303,7 +308,7 @@ input[type="email"] {
 
 .newsletter .newsletter-form fieldset button {
   /* background-color: #202d3d; */
-  background: linear-gradient(45deg, #17232e, #1a293d);;
+  background: linear-gradient(45deg, #17232e, #1a293d);
   width: 65%;
   height: 34px;
   font-weight: bold;
@@ -312,7 +317,7 @@ input[type="email"] {
 }
 
 .newsletter .newsletter-form fieldset button:hover {
-  background: linear-gradient(140deg, #1b2733, #1c2d42);;
+  background: linear-gradient(140deg, #1b2733, #1c2d42);
   cursor: pointer;
 }
 
